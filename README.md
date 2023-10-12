@@ -21,3 +21,13 @@ int를 unsigned char로 convert해야함
 ### ft_memcpy, ft_memmove
 ##### memory overlap
 
+
+## WIP
+- memmove
+- strncmp
+- memchr
+- memcmp
+- strnstr
+- atoi
+- calloc
+- strdup

@@ -1,23 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: junghopa <juhnhopa@student.42seoul.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/12 16:18:42 by junghopa          #+#    #+#             */
-/*   Updated: 2023/10/12 16:47:02 by junghopa         ###   ########.fr       */
+/*   Created: 2023/10/12 17:25:42 by junghopa          #+#    #+#             */
+/*   Updated: 2023/10/12 17:31:41 by junghopa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-void	*ft_memcpy(void *dst, void *src, unsigned long n)
-{
-	unsigned long	idx;
+extern unsigned long	ft_strlen(char *s);
 
-	idx = 0;
-	while (idx < n)
-	{
-		*((char *)dst + idx) = *((char *)src + idx);
-		idx++;
-	}
-	return (dst);
+char	*ft_strrchr(char *s, int c)
+{
 }
