@@ -1,20 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: junghopa <juhnhopa@student.42seoul.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/09 15:01:10 by junghopa          #+#    #+#             */
-/*   Updated: 2023/10/09 18:31:34 by junghopa         ###   ########.fr       */
+/*   Created: 2023/10/12 12:07:54 by junghopa          #+#    #+#             */
+/*   Updated: 2023/10/12 15:30:17 by junghopa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-unsigned long	ft_strlen(char *s)
+void	*ft_memset(void *b, int c, unsigned long len)
 {
-	unsigned long	cnt;
+	unsigned long	idx;
+	unsigned char	cha;
 
-	cnt = 0;
-	while (*(s + cnt))
-		cnt++;
-	return (cnt);
+	idx = 0;
+	cha = (unsigned char) c;
+	while (idx < len)
+	{
+		*((unsigned char *)b + idx) = cha;
+		idx++;
+	}
+	return (b);
 }

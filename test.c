@@ -1,11 +1,13 @@
 #include<stdio.h>
-#include<ctype.h>
+#include<string.h>
 
 int	main(void)
 {
-	printf("isascii('1') : %d\n", isascii('1'));
-	printf("isascii('a') : %d\n", isascii('a'));
-	printf("isascii('A') : %d\n", isascii('A'));
-	printf("isascii('!') : %d\n", isascii('!'));
+	char	tgt[3] = "tgt";
+	char	src[10] = "source";
+
+	printf("before : %s\n", tgt);
+	memcpy(tgt, src, sizeof(4));
+	printf("afterr : %s\n", src);
 	return (0);
 }

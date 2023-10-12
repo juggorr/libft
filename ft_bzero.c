@@ -1,20 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: junghopa <juhnhopa@student.42seoul.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/09 15:01:10 by junghopa          #+#    #+#             */
-/*   Updated: 2023/10/09 18:31:34 by junghopa         ###   ########.fr       */
+/*   Created: 2023/10/12 15:13:07 by junghopa          #+#    #+#             */
+/*   Updated: 2023/10/12 15:47:10 by junghopa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-unsigned long	ft_strlen(char *s)
-{
-	unsigned long	cnt;
+extern void	*ft_memset(void *b, int	c, unsigned long len);
 
-	cnt = 0;
-	while (*(s + cnt))
-		cnt++;
-	return (cnt);
+void	ft_bzero(void *s, unsigned long n)
+{
+	ft_memset(s, 0, n);
 }

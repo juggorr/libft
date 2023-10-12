@@ -1,20 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_toupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: junghopa <juhnhopa@student.42seoul.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/09 15:01:10 by junghopa          #+#    #+#             */
-/*   Updated: 2023/10/09 18:31:34 by junghopa         ###   ########.fr       */
+/*   Created: 2023/10/09 16:03:08 by junghopa          #+#    #+#             */
+/*   Updated: 2023/10/09 16:11:42 by junghopa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-unsigned long	ft_strlen(char *s)
+int	ft_toupper(int c)
 {
-	unsigned long	cnt;
-
-	cnt = 0;
-	while (*(s + cnt))
-		cnt++;
-	return (cnt);
+	if (c >= 97 && c <= 122)
+		c -= 32;
+	return (c);
 }

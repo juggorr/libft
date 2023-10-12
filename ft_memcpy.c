@@ -1,20 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: junghopa <juhnhopa@student.42seoul.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/09 15:01:10 by junghopa          #+#    #+#             */
-/*   Updated: 2023/10/09 18:31:34 by junghopa         ###   ########.fr       */
+/*   Created: 2023/10/12 16:18:42 by junghopa          #+#    #+#             */
+/*   Updated: 2023/10/12 16:33:33 by junghopa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-unsigned long	ft_strlen(char *s)
+#include<stdio.h>
+void	*ft_memcpy(void *dst, void *src, unsigned long n)
 {
-	unsigned long	cnt;
+	unsigned long	idx;
 
-	cnt = 0;
-	while (*(s + cnt))
-		cnt++;
-	return (cnt);
+	idx = 0;
+	while (idx < n)
+	{
+		*((char *)dst + idx) = *((char *)src + idx);
+		idx++;
+	}
+	return (dst);
+}
+
+#include<stdio.h>
+int	main(void)
+{
+	char	dst[6] = "dst";
+	char	src[6] = "src";
+
+	printf("pre dst : %s\n", dst);
+	ft_memcpy(dst, src, 2);
+	printf("postdst : %s\n", dst);
+	return (0);
 }
