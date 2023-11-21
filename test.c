@@ -3,11 +3,6 @@
 
 int	main(void)
 {
-	char	tgt[3] = "tgt";
-	char	src[10] = "source";
-
-	printf("before : %s\n", tgt);
-	memcpy(tgt, src, sizeof(4));
-	printf("afterr : %s\n", src);
+	printf("val: %d\n", strncmp("goo", "good", 3));
 	return (0);
 }

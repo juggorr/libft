@@ -1,28 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: junghopa <juhnhopa@student.42seoul.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/12 17:25:42 by junghopa          #+#    #+#             */
-/*   Updated: 2023/10/12 17:31:41 by junghopa         ###   ########.fr       */
+/*   Created: 2023/11/21 14:37:57 by junghopa          #+#    #+#             */
+/*   Updated: 2023/11/21 15:03:23 by junghopa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-extern unsigned long	ft_strlen(char *s);
+#include<stdio.h>
 
-char	*ft_strrchr(char *s, int c)
+int	ft_strncmp(const char *s1, const char *s2, unsigned long n)
 {
-    unsigned long   len;
-    unsigned long   idx;
+	unsigned long	idx;
 
-    len = ft_strlen(s);
-    idx = len + 1;
-    while (idx >= 0)
-    {
-        if (*(s + idx) == c)
-            return (s);
-        idx--;
-    }
-    return (0);
+	idx = 0;
+	while (idx < n - 1)
+	{
+		if (*(s1 + idx) != *(s2 + idx))
+			break;
+		else
+			idx++;
+	}
+	return (*(s1 + idx) - *(s2 + idx));
 }
