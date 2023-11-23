@@ -1,20 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: junghopa <juhnhopa@student.42seoul.>       +#+  +:+       +#+        */
+/*   By: juggorr <juggorr@gmail.com>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/09 15:01:10 by junghopa          #+#    #+#             */
-/*   Updated: 2023/11/23 16:19:29 by juggorr          ###   ########.fr       */
+/*   Created: 2023/11/22 12:12:32 by juggorr           #+#    #+#             */
+/*   Updated: 2023/11/22 13:17:51 by juggorr          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-unsigned long	ft_strlen(const char *s)
+void	ft_memchr(const void *s, int c, unsigned long n)
 {
-	unsigned long	cnt;
+	unsigned long	idx;
 
-	cnt = 0;
-	while (*(s + cnt))
-		cnt++;
-	return (cnt);
+	idx = 0;
+	while (idx < n)
+	{
+		if ((unsigned char)*(s + idx) == (unsigned char)c)
+			return (*(s + idx));
+		idx++;
+	}
+	return (0);
 }

@@ -1,20 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: junghopa <juhnhopa@student.42seoul.>       +#+  +:+       +#+        */
+/*   By: juggorr <juggorr@gmail.com>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/09 15:01:10 by junghopa          #+#    #+#             */
-/*   Updated: 2023/11/23 16:19:29 by juggorr          ###   ########.fr       */
+/*   Created: 2023/11/23 17:50:28 by juggorr           #+#    #+#             */
+/*   Updated: 2023/11/23 18:15:48 by juggorr          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-unsigned long	ft_strlen(const char *s)
-{
-	unsigned long	cnt;
+#include <stdlib.h>
 
-	cnt = 0;
-	while (*(s + cnt))
-		cnt++;
-	return (cnt);
+void	*ft_calloc(size_t number, size_t size)
+{
+	void	*p;
+	size_t	idx;
+
+	p = malloc(sizeof(size) * number);
+	idx = 0;
+	while (idx < size * number)
+	{
+		*(p + idx) = 0;
+		idx++;
+	}
+	return (p);
 }

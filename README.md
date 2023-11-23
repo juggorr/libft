@@ -21,6 +21,12 @@ int를 unsigned char로 convert해야함
 ### ft_memcpy, ft_memmove
 ##### memory overlap
 
+#### ft_memchr
+
+https://rcode.tistory.com/14 char과 unsigned char을 구분해야 하는 이유
+
+
+
 
 ## WIP
 - memmove
