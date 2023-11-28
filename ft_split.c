@@ -6,7 +6,7 @@
 /*   By: juggorr <juggorr@gmail.com>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/27 17:19:09 by juggorr           #+#    #+#             */
-/*   Updated: 2023/11/28 12:23:44 by juggorr          ###   ########.fr       */
+/*   Updated: 2023/11/28 12:37:21 by juggorr          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <stdlib.h>
@@ -40,11 +40,11 @@ int	ft_count_words(char const *s, char c)
 
 char	**ft_split(char const *s, char c)
 {
-	int		words;
+	int		words_cnt;
 	char	**str;
 
-	words = ft_count_words(s, c);
-	str = (char **)malloc(1);
+	words_cnt = ft_count_words(s, c);
+	str = (char **)malloc(sizeof(char *) * (words_cnt + 1));
 	printf("words: %d\n", words);
 	return (str);
 }
