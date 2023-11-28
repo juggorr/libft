@@ -6,7 +6,7 @@
 /*   By: junghopa <juhnhopa@student.42seoul.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/28 15:53:19 by junghopa          #+#    #+#             */
-/*   Updated: 2023/11/28 17:04:26 by junghopa         ###   ########.fr       */
+/*   Updated: 2023/11/28 17:20:00 by junghopa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <stdlib.h>
@@ -32,19 +32,22 @@ char	ft_digits_cnt(int n)
 	return (cnt);
 }
 
-void	ft_pos_itoa(char *res, int n, char len)
+void	ft_pos_itoa(char *res, int n, unsigned char len)
 {
+	res[len] = '\0';
 	while (n > 0)
 	{
-		*(res + len) = n % 10;
+		res[len] = n % 10 + 48;
 		n = n / 10;
+		len--;
 	}
+	printf("%s\n", res);
 }
 
 char	*ft_itoa(int n)
 {
-	char	len;
-	char	*res;
+	unsigned char	len;
+	char			*res;
 
 	len = ft_digits_cnt(n);
 	res = (char *)malloc(sizeof(char) * (len + 1));
