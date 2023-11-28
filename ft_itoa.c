@@ -6,11 +6,10 @@
 /*   By: junghopa <juhnhopa@student.42seoul.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/28 15:53:19 by junghopa          #+#    #+#             */
-/*   Updated: 2023/11/28 17:20:00 by junghopa         ###   ########.fr       */
+/*   Updated: 2023/11/28 18:35:52 by juggorr          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <stdlib.h>
-#include<stdio.h>
 
 char	ft_digits_cnt(int n)
 {
@@ -32,16 +31,30 @@ char	ft_digits_cnt(int n)
 	return (cnt);
 }
 
-void	ft_pos_itoa(char *res, int n, unsigned char len)
+void	ft_neg_itoa(char *res, long n, unsigned char len)
+{
+	n = -n;
+	res[len] = '\0';
+	len--;
+	while (len > 0)
+	{
+		res[len] = n % 10 + 48;
+		n = n / 10;
+		len--;
+	}
+	res[len] = '-';
+}
+
+void	ft_pos_itoa(char *res, long n, unsigned char len)
 {
 	res[len] = '\0';
+	len--;
 	while (n > 0)
 	{
 		res[len] = n % 10 + 48;
 		n = n / 10;
 		len--;
 	}
-	printf("%s\n", res);
 }
 
 char	*ft_itoa(int n)
@@ -51,19 +64,12 @@ char	*ft_itoa(int n)
 
 	len = ft_digits_cnt(n);
 	res = (char *)malloc(sizeof(char) * (len + 1));
+	n = (long)n;
 	if (!res)
 		return (0);
-	if (n >= 0)	
+	if (n >= 0)
 		ft_pos_itoa(res, n, len);
-	return (res);	
-}
-
-#include<stdio.h>
-int	main(void)
-{
-	char	*a;
-
-	a = ft_itoa(2147483647);
-	printf("%s\n", a);
-	return (0);
+	else
+		ft_neg_itoa(res, n, len);
+	return (res);
 }
