@@ -3,35 +3,64 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: juggorr <juggorr@gmail.com>                +#+  +:+       +#+        */
+/*   By: junghopa <juhnhopa@student.42seoul.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/27 20:42:12 by juggorr           #+#    #+#             */
-/*   Updated: 2023/11/27 20:55:10 by juggorr          ###   ########.fr       */
+/*   Created: 2023/11/28 15:53:19 by junghopa          #+#    #+#             */
+/*   Updated: 2023/11/28 17:04:26 by junghopa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <stdlib.h>
+#include<stdio.h>
 
-char	ft_memcheck(int n)
+char	ft_digits_cnt(int n)
 {
-	char	len;
-	
-	len = 0;
+	char	cnt;
+
+	if (n == -2147483648)
+		return (11);
+	cnt = 0;
 	if (n < 0)
 	{
-		n = n * -1;
-
+		cnt++;
+		n *= -1;
 	}
+	while (n > 0)
+	{
+		n = n / 10;
+		cnt++;
+	}
+	return (cnt);
+}
 
+void	ft_pos_itoa(char *res, int n, char len)
+{
+	while (n > 0)
+	{
+		*(res + len) = n % 10;
+		n = n / 10;
+	}
 }
 
 char	*ft_itoa(int n)
 {
-	char	nums[10];
-	char	*str;
+	char	len;
+	char	*res;
 
-	if (n == -2147483648)
-	{
-		
-	}
-	nums = "0123456789";
+	len = ft_digits_cnt(n);
+	res = (char *)malloc(sizeof(char) * (len + 1));
+	if (!res)
+		return (0);
+	if (n >= 0)	
+		ft_pos_itoa(res, n, len);
+	return (res);	
+}
+
+#include<stdio.h>
+int	main(void)
+{
+	char	*a;
+
+	a = ft_itoa(2147483647);
+	printf("%s\n", a);
+	return (0);
 }

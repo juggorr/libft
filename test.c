@@ -2,21 +2,16 @@
 #include<stdio.h>
 #include<string.h>
 
-void	chglob(size_t *num)
-{
-	*num += 1;
-	return ;
-}
-
 int	main(void)
 {
-	size_t	num;
-	size_t	*pnum;
+	int		a = 1234;
+	char	cnt = 0;
 
-	num = 0;
-	*pnum = num;
-	printf("num: %lu\n", *pnum);
-	chglob(pnum);
-	printf("num: %lu\n", *pnum);
+	while (a > 0)
+	{
+		a = a / 10;
+		cnt++;
+	}
+	printf("%d\n", cnt);
 	return (0);
 }
