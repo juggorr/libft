@@ -6,11 +6,10 @@
 /*   By: juggorr <juggorr@gmail.com>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/27 17:19:09 by juggorr           #+#    #+#             */
-/*   Updated: 2023/11/28 12:37:21 by juggorr          ###   ########.fr       */
+/*   Updated: 2023/11/28 15:52:23 by junghopa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <stdlib.h>
-#include<stdio.h>
 
 extern size_t	ft_strlen(char const *s);
 
@@ -35,22 +34,63 @@ int	ft_count_words(char const *s, char c)
 		}
 		idx++;
 	}
+	if (flag)
+		words_cnt++;
 	return (words_cnt);
+}
+
+size_t	ft_strlen_split(char const *s, char c)
+{
+	size_t	idx;
+
+	idx = 0;
+	while (*(s + idx) && *(s + idx) != c)
+		idx++;
+	return (idx);
+}
+
+char	*ft_strdup_split(char const *s, char c)
+{
+	size_t	len;
+	char	*str;
+	size_t	idx;
+
+	len = ft_strlen_split(s, c);
+	str = (char *)malloc(sizeof(char) * (len + 1));
+	idx = 0;
+	while (idx < len)
+	{
+		*(str + idx) = *(s + idx);
+		idx++;
+	}
+	return (str);
 }
 
 char	**ft_split(char const *s, char c)
 {
 	int		words_cnt;
-	char	**str;
+	char	**res;
+	size_t	str_idx;
+	size_t	arr_idx;
+	int		flag;
 
 	words_cnt = ft_count_words(s, c);
-	str = (char **)malloc(sizeof(char *) * (words_cnt + 1));
-	printf("words: %d\n", words);
-	return (str);
-}
-
-int	main(void)
-{
-	ft_split("111", '1');
-	return (0);
+	res = (char **)malloc(sizeof(char *) * (words_cnt + 1));
+	str_idx = 0;
+	arr_idx = 0;
+	flag = 0;
+	while (str_idx < ft_strlen(s))
+	{
+		while (s[str_idx] == c && s[str_idx])
+			str_idx++;
+		if (s[str_idx] != c && s[str_idx])
+		{
+			res[arr_idx] = ft_strdup_split(&s[str_idx], c);
+			arr_idx++;
+		}
+		while (s[str_idx] != c && s[str_idx])
+			str_idx++;
+	}
+	res[arr_idx] = 0;
+	return (res);
 }
