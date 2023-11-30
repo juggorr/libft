@@ -6,10 +6,10 @@
 /*   By: juggorr <juggorr@gmail.com>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/23 18:17:13 by juggorr           #+#    #+#             */
-/*   Updated: 2023/11/28 15:19:08 by junghopa         ###   ########.fr       */
+/*   Updated: 2023/11/30 16:05:57 by juggorr          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <stdlib.h>
+#include "libft.h"
 
 extern unsigned long	ft_strlen(const char *str);
 
@@ -28,15 +28,4 @@ char	*ft_strdup(const char *str)
 		idx++;
 	}
 	return (p);
-}
-
-#include <stdio.h>
-int	main(void)
-{
-	char	*str = "abc";
-	char	*dst;
-
-	dst = ft_strdup(str);
-	printf("%s\n", dst);
-	return (0);
 }

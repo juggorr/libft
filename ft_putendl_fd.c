@@ -6,10 +6,10 @@
 /*   By: juggorr <juggorr@gmail.com>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/29 15:46:47 by juggorr           #+#    #+#             */
-/*   Updated: 2023/11/29 16:14:45 by juggorr          ###   ########.fr       */
+/*   Updated: 2023/11/30 16:05:57 by juggorr          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <unistd.h>
+#include "libft.h"
 
 extern unsigned long	ft_strlen(char *s);
 

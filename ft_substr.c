@@ -6,10 +6,10 @@
 /*   By: juggorr <juggorr@gmail.com>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/24 13:29:49 by juggorr           #+#    #+#             */
-/*   Updated: 2023/11/27 17:36:23 by juggorr          ###   ########.fr       */
+/*   Updated: 2023/11/30 16:05:57 by juggorr          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <stdlib.h>
+#include "libft.h"
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {

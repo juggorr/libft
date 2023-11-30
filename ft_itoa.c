@@ -6,10 +6,10 @@
 /*   By: junghopa <juhnhopa@student.42seoul.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/28 15:53:19 by junghopa          #+#    #+#             */
-/*   Updated: 2023/11/28 18:35:52 by juggorr          ###   ########.fr       */
+/*   Updated: 2023/11/30 16:05:57 by juggorr          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <stdlib.h>
+#include "libft.h"
 
 char	ft_digits_cnt(int n)
 {

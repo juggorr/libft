@@ -6,10 +6,10 @@
 /*   By: juggorr <juggorr@gmail.com>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/29 16:14:59 by juggorr           #+#    #+#             */
-/*   Updated: 2023/11/29 16:46:02 by juggorr          ###   ########.fr       */
+/*   Updated: 2023/11/30 16:05:57 by juggorr          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <unistd.h>
+#include "libft.h"
 
 extern void	ft_putchar_fd(char c, int fd);
 

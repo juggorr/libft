@@ -6,10 +6,10 @@
 /*   By: junghopa <juhnhopa@student.42seoul.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/21 14:37:57 by junghopa          #+#    #+#             */
-/*   Updated: 2023/11/21 15:03:23 by junghopa         ###   ########.fr       */
+/*   Updated: 2023/11/30 16:05:57 by juggorr          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include<stdio.h>
+#include "libft.h"
 
 int	ft_strncmp(const char *s1, const char *s2, unsigned long n)
 {
