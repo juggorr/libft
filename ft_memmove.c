@@ -1,27 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: junghopa <juhnhopa@student.42seoul.>       +#+  +:+       +#+        */
+/*   By: juggorr <juggorr@gmail.com>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/12 12:07:54 by junghopa          #+#    #+#             */
-/*   Updated: 2023/11/30 18:51:47 by juggorr          ###   ########.fr       */
+/*   Created: 2023/11/30 16:18:02 by juggorr           #+#    #+#             */
+/*   Updated: 2023/11/30 20:42:56 by juggorr          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-void	*ft_memset(void *b, int c, unsigned long len)
+void	*memmove(void *dst, void const *src, size_t len)
 {
-	unsigned long	idx;
-	unsigned char	cha;
 	unsigned char	*tmp;
 
-	idx = 0;
-	cha = (unsigned char)c;
-	tmp = (unsigned char *)b;
-	while (idx < len)
-	{
-		*(tmp + idx) = cha;
-		idx++;
-	}
-	return (b);
+	tmp = (unsigned char *)dst;
+
 }
