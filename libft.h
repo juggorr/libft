@@ -6,7 +6,7 @@
 /*   By: juggorr <juggorr@gmail.com>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/30 15:17:40 by juggorr           #+#    #+#             */
-/*   Updated: 2023/11/30 15:41:20 by juggorr          ###   ########.fr       */
+/*   Updated: 2023/12/01 17:45:59 by juggorr          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #ifndef LIBFT_H
@@ -34,7 +34,7 @@ void			ft_putnbr_fd(int n, int fd);
 void			ft_putstr_fd(char *s, int fd);
 int				ft_count_words(char const *s, char c);
 char			*ft_strchr(char *s, int c);
-char			*ft_strdup(char char *str);
+char			*ft_strdup(const char *str);
 void			ft_striteri(char *s, void (*f)(unsigned int, char*));
 char			*ft_strjoin(char const *s1, char const *s2);
 unsigned long	ft_strlcat(char *dset, char *src, unsigned long size);
