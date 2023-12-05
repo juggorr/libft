@@ -6,22 +6,21 @@
 /*   By: junghopa <juhnhopa@student.42seoul.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/21 14:37:57 by junghopa          #+#    #+#             */
-/*   Updated: 2023/11/30 16:05:57 by juggorr          ###   ########.fr       */
+/*   Updated: 2023/12/06 00:38:26 by juggorr          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include "libft.h"
-
-int	ft_strncmp(const char *s1, const char *s2, unsigned long n)
+int	ft_strncmp(const char *s1, const char *s2, unsigned int n)
 {
-	unsigned long	idx;
+	unsigned int	idx;
 
 	idx = 0;
-	while (idx < n - 1)
+	if (n == 0)
+		return (0);
+	while (idx < n && s1[idx] && s2[idx])
 	{
 		if (*(s1 + idx) != *(s2 + idx))
-			break;
-		else
-			idx++;
+			break ;
+		idx++;
 	}
-	return (*(s1 + idx) - *(s2 + idx));
+	return ((unsigned char)*(s1 + idx) - (unsigned char)*(s2 + idx));
 }

@@ -6,7 +6,7 @@
 /*   By: juggorr <juggorr@gmail.com>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/30 16:18:02 by juggorr           #+#    #+#             */
-/*   Updated: 2023/12/05 18:23:05 by juggorr          ###   ########.fr       */
+/*   Updated: 2023/12/05 18:51:20 by juggorr          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 void	*ft_memmove(void *dst, void const *src, unsigned int len)
@@ -17,16 +17,13 @@ void	*ft_memmove(void *dst, void const *src, unsigned int len)
 
 	from = (unsigned char *)src;
 	to = (unsigned char *)dst;
-	idx = 0
+	idx = 0;
 	if (from == to || len == 0)
 		return (dst);
 	if (from > to)
 	{
-		while (idx < len)
-		{
-			to[idx] = from[idx];
-			idx++;
-		}
+		while (idx++ < len)
+			*to++ = *from++;
 	}
 	if (from < to)
 	{

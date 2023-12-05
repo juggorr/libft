@@ -6,10 +6,10 @@
 /*   By: junghopa <juhnhopa@student.42seoul.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/09 17:57:38 by junghopa          #+#    #+#             */
-/*   Updated: 2023/10/09 18:32:41 by junghopa         ###   ########.fr       */
+/*   Updated: 2023/12/05 19:11:55 by juggorr          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-extern unsigned long	ft_strlen(char *s);
+extern unsigned int	ft_strlen(const char *s);
 
 unsigned long	ft_strlcat(char *dest, char *src, unsigned long size)
 {

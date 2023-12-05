@@ -6,12 +6,12 @@
 /*   By: junghopa <juhnhopa@student.42seoul.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/12 12:07:54 by junghopa          #+#    #+#             */
-/*   Updated: 2023/12/03 17:46:23 by juggorr          ###   ########.fr       */
+/*   Updated: 2023/12/05 19:14:03 by juggorr          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-void	*ft_memset(void *b, int c, unsigned long len)
+void	*ft_memset(void *b, int c, unsigned int len)
 {
-	unsigned long	idx;
+	unsigned int	idx;
 	unsigned char	uc;
 	unsigned char	*tmp;
 

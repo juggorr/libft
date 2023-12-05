@@ -6,12 +6,12 @@
 /*   By: juggorr <juggorr@gmail.com>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/27 14:23:56 by juggorr           #+#    #+#             */
-/*   Updated: 2023/11/30 16:05:57 by juggorr          ###   ########.fr       */
+/*   Updated: 2023/12/05 19:16:21 by juggorr          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 
-extern size_t	ft_strlen(const char *str);
+extern unsigned int	ft_strlen(const char *str);
 
 void	ft_fillstr(char *str, size_t str_idx, char const *s1, char const *s2)
 {

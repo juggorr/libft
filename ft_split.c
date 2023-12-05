@@ -6,12 +6,12 @@
 /*   By: juggorr <juggorr@gmail.com>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/27 17:19:09 by juggorr           #+#    #+#             */
-/*   Updated: 2023/11/30 16:05:57 by juggorr          ###   ########.fr       */
+/*   Updated: 2023/12/05 19:17:06 by juggorr          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 
-extern size_t	ft_strlen(char const *s);
+extern unsigned int	ft_strlen(char const *s);
 
 int	ft_count_words(char const *s, char c)
 {
@@ -20,7 +20,6 @@ int	ft_count_words(char const *s, char c)
 	size_t	idx;
 
 	words_cnt = 0;
-	flag = 0;
 	idx = 0;
 	while (idx < ft_strlen(s))
 	{
@@ -72,13 +71,11 @@ char	**ft_split(char const *s, char c)
 	char	**res;
 	size_t	str_idx;
 	size_t	arr_idx;
-	int		flag;
 
 	words_cnt = ft_count_words(s, c);
 	res = (char **)malloc(sizeof(char *) * (words_cnt + 1));
 	str_idx = 0;
 	arr_idx = 0;
-	flag = 0;
 	while (str_idx < ft_strlen(s))
 	{
 		while (s[str_idx] == c && s[str_idx])

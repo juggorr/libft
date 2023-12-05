@@ -6,12 +6,12 @@
 /*   By: junghopa <juhnhopa@student.42seoul.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/09 14:46:53 by junghopa          #+#    #+#             */
-/*   Updated: 2023/10/09 14:48:50 by junghopa         ###   ########.fr       */
+/*   Updated: 2023/12/05 19:37:11 by juggorr          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 int	ft_isascii(int c)
 {
-	if (c >= 0 && c <= 255)
+	if (c >= 0 && c < 128)
 		return (1);
 	return (0);
 }

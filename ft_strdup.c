@@ -6,23 +6,29 @@
 /*   By: juggorr <juggorr@gmail.com>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/23 18:17:13 by juggorr           #+#    #+#             */
-/*   Updated: 2023/12/05 16:11:59 by juggorr          ###   ########.fr       */
+/*   Updated: 2023/12/06 00:55:27 by juggorr          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 
-extern unsigned long	ft_strlen(const char *str);
+extern unsigned int	ft_strlen(const char *str);
 
 char	*ft_strdup(const char *str)
 {
-	unsigned long	len;
-	unsigned long	idx;
+	unsigned int	len;
+	unsigned int	idx;
 	char			*p;
 
 	len = ft_strlen(str);
 	idx = 0;
-	p = (char*)malloc(len + 1);
-	while (idx++ < len)
+	p = (char *)malloc(len + 1);
+	if (!p)
+		return (0);
+	while (idx < len)
+	{
 		*(p + idx) = *(str + idx);
+		idx++;
+	}
+	*(p + idx) = '\0';
 	return (p);
 }

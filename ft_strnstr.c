@@ -6,26 +6,28 @@
 /*   By: juggorr <juggorr@gmail.com>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/23 16:00:20 by juggorr           #+#    #+#             */
-/*   Updated: 2023/11/30 16:05:57 by juggorr          ###   ########.fr       */
+/*   Updated: 2023/12/06 00:05:30 by juggorr          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-extern unsigned long	ft_strlen(const char *s1);
+extern unsigned int	ft_strlen(const char *s1);
 
-char	*ft_strnstr(const char *s1, const char *s2, unsigned long n)
+char	*ft_strnstr(const char *big, const char *little, unsigned int n)
 {
-	unsigned long	i;
-	unsigned long	j;
-	
+	unsigned int	i;
+	unsigned int	j;
+
 	i = 0;
-	if (!ft_strlen(s2))
-		return ((char*)s1);
+	if (!ft_strlen(little))
+		return ((char *)big);
+	if (!ft_strlen(big) || n == 0)
+		return (0);
 	while (i < n)
 	{
 		j = 0;
-		while (s1[i + j] && s2[j] && s1[i + j] == s2[j])
+		while (big[i + j] && little[j] && big[i + j] == little[j] && i + j < n)
 			j++;
-		if (!s2[j])
-			return ((char*)(s1 + i));
+		if (!little[j])
+			return ((char *)(big + i));
 		i++;
 	}
 	return (0);

@@ -6,7 +6,7 @@
 /*   By: juggorr <juggorr@gmail.com>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/28 19:36:56 by juggorr           #+#    #+#             */
-/*   Updated: 2023/11/28 19:39:40 by juggorr          ###   ########.fr       */
+/*   Updated: 2023/12/05 19:02:19 by juggorr          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 void	ft_striteri(char *s, void (*f)(unsigned int, char*))
@@ -16,7 +16,7 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 	idx = 0;
 	while (*(s + idx))
 	{
-		*(s + idx) = f(idx, &s[idx]);
+		f(idx, &s[idx]);
 		idx++;
 	}
 }

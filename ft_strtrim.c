@@ -6,12 +6,12 @@
 /*   By: juggorr <juggorr@gmail.com>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/27 14:46:26 by juggorr           #+#    #+#             */
-/*   Updated: 2023/11/30 16:05:57 by juggorr          ###   ########.fr       */
+/*   Updated: 2023/12/05 19:16:48 by juggorr          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 
-extern size_t	ft_strlen(char const *s1);
+extern unsigned int	ft_strlen(char const *s1);
 
 int	ft_isinset(char const *s1, char const *set, size_t len)
 {
