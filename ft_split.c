@@ -6,7 +6,7 @@
 /*   By: juggorr <juggorr@gmail.com>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/27 17:19:09 by juggorr           #+#    #+#             */
-/*   Updated: 2023/12/05 19:17:06 by juggorr          ###   ########.fr       */
+/*   Updated: 2023/12/06 02:03:08 by juggorr          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
@@ -56,6 +56,8 @@ char	*ft_strdup_split(char const *s, char c)
 
 	len = ft_strlen_split(s, c);
 	str = (char *)malloc(sizeof(char) * (len + 1));
+	if (!str)
+		return (0);
 	idx = 0;
 	while (idx < len)
 	{
@@ -74,6 +76,8 @@ char	**ft_split(char const *s, char c)
 
 	words_cnt = ft_count_words(s, c);
 	res = (char **)malloc(sizeof(char *) * (words_cnt + 1));
+	if (!res)
+		return (0);
 	str_idx = 0;
 	arr_idx = 0;
 	while (str_idx < ft_strlen(s))

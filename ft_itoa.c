@@ -6,7 +6,7 @@
 /*   By: junghopa <juhnhopa@student.42seoul.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/28 15:53:19 by junghopa          #+#    #+#             */
-/*   Updated: 2023/11/30 16:05:57 by juggorr          ###   ########.fr       */
+/*   Updated: 2023/12/06 01:48:42 by juggorr          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
@@ -31,7 +31,7 @@ char	ft_digits_cnt(int n)
 	return (cnt);
 }
 
-void	ft_neg_itoa(char *res, long n, unsigned char len)
+void	ft_neg_itoa(char *res, long long n, unsigned char len)
 {
 	n = -n;
 	res[len] = '\0';
@@ -45,7 +45,7 @@ void	ft_neg_itoa(char *res, long n, unsigned char len)
 	res[len] = '-';
 }
 
-void	ft_pos_itoa(char *res, long n, unsigned char len)
+void	ft_pos_itoa(char *res, long long n, unsigned char len)
 {
 	res[len] = '\0';
 	len--;
@@ -64,7 +64,7 @@ char	*ft_itoa(int n)
 
 	len = ft_digits_cnt(n);
 	res = (char *)malloc(sizeof(char) * (len + 1));
-	n = (long)n;
+	n = (long long)n;
 	if (!res)
 		return (0);
 	if (n >= 0)
