@@ -6,7 +6,7 @@
 /*   By: juggorr <juggorr@gmail.com>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/27 14:46:26 by juggorr           #+#    #+#             */
-/*   Updated: 2023/12/05 19:16:48 by juggorr          ###   ########.fr       */
+/*   Updated: 2023/12/06 14:04:24 by juggorr          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
@@ -30,9 +30,11 @@ int	ft_isinset(char const *s1, char const *set, size_t len)
 size_t	ft_begidx(char const *s1, char const *set, size_t len)
 {
 	size_t	idx;
+	size_t	s1_len;
 
 	idx = 0;
-	while (idx < len)
+	s1_len = ft_strlen(s1);
+	while (idx < s1_len)
 	{
 		if (ft_isinset(&s1[idx], set, len))
 			idx++;
@@ -79,7 +81,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	if (!str)
 		return (0);
 	str_idx = 0;
-	while (beg_idx < end_idx)
+	while (beg_idx <= end_idx)
 	{
 		str[str_idx] = s1[beg_idx];
 		str_idx++;

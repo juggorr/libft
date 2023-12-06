@@ -6,7 +6,7 @@
 /*   By: juggorr <juggorr@gmail.com>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/27 17:19:09 by juggorr           #+#    #+#             */
-/*   Updated: 2023/12/06 02:03:08 by juggorr          ###   ########.fr       */
+/*   Updated: 2023/12/06 14:20:37 by juggorr          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
@@ -64,6 +64,7 @@ char	*ft_strdup_split(char const *s, char c)
 		*(str + idx) = *(s + idx);
 		idx++;
 	}
+	str[idx] = '\0';
 	return (str);
 }
 

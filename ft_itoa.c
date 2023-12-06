@@ -6,7 +6,7 @@
 /*   By: junghopa <juhnhopa@student.42seoul.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/28 15:53:19 by junghopa          #+#    #+#             */
-/*   Updated: 2023/12/06 01:48:42 by juggorr          ###   ########.fr       */
+/*   Updated: 2023/12/06 14:10:01 by juggorr          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
@@ -17,6 +17,8 @@ char	ft_digits_cnt(int n)
 
 	if (n == -2147483648)
 		return (11);
+	if (n == 0)
+		return (1);
 	cnt = 0;
 	if (n < 0)
 	{
@@ -49,6 +51,8 @@ void	ft_pos_itoa(char *res, long long n, unsigned char len)
 {
 	res[len] = '\0';
 	len--;
+	if (n == 0)
+		res[len] = n + 48;
 	while (n > 0)
 	{
 		res[len] = n % 10 + 48;
