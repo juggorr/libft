@@ -6,7 +6,7 @@
 /*   By: juggorr <juggorr@gmail.com>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/27 14:46:26 by juggorr           #+#    #+#             */
-/*   Updated: 2023/12/06 17:08:13 by juggorr          ###   ########.fr       */
+/*   Updated: 2023/12/06 17:32:07 by juggorr          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
@@ -73,10 +73,11 @@ char	*ft_strtrim(char const *s1, char const *set)
 
 	beg_idx = ft_begidx(s1, set, ft_strlen(set));
 	end_idx = ft_endidx(s1, set, ft_strlen(set));
-	if (beg_idx >= end_idx)
+	if (*s1 == 0 || beg_idx >= end_idx)
 	{
 		str = (char *)malloc(1);
-		str[0] = '';
+		*str = 0;
+		return (str);
 	}
 	str = (char *)malloc(sizeof(char) * (end_idx - beg_idx + 1));
 	if (!str)
@@ -90,15 +91,4 @@ char	*ft_strtrim(char const *s1, char const *set)
 	}
 	str[str_idx] = '\0';
 	return (str);
-}
-
-#include <stdio.h>
-#include <string.h>
-
-int	main(void)
-{
-	char	*s1 = "";
-	char	*s2 = "ab";
-	printf("%s\n", ft_strtrim("", ""));
-	return (0);
 }
