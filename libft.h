@@ -6,7 +6,7 @@
 /*   By: juggorr <juggorr@gmail.com>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/30 15:17:40 by juggorr           #+#    #+#             */
-/*   Updated: 2023/12/07 14:04:04 by juggorr          ###   ########.fr       */
+/*   Updated: 2023/12/07 15:19:08 by juggorr          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #ifndef LIBFT_H
@@ -47,7 +47,7 @@ int				ft_strncmp(const char *s1, const char *s2, unsigned int n);
 char			*ft_strnstr(const char *s1, const char *s2, unsigned int n);
 char			*ft_strrchr(char *s, int c);
 char			*ft_strtrim(char const *s1, char const *set);
-char			*ft_substr(char const *s, unsigned int start, size_t len);
+char			*ft_substr(char const *s, size_t start, size_t len);
 char			**ft_split(char const *s, char c);
 int				ft_tolower(int c);
 int				ft_toupper(int c);
