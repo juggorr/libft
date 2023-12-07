@@ -6,7 +6,7 @@
 /*   By: juggorr <juggorr@gmail.com>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/29 15:46:47 by juggorr           #+#    #+#             */
-/*   Updated: 2023/12/05 19:11:55 by juggorr          ###   ########.fr       */
+/*   Updated: 2023/12/07 14:01:38 by juggorr          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
@@ -22,9 +22,4 @@ void	ft_putendl_fd(char *s, int fd)
 	len = ft_strlen(s);
 	write(fd, s, len);
 	write(fd, "\n", 1);
-}
-
-int	main(void)
-{
-	ft_putendl_fd("abc", 1);
 }

@@ -6,7 +6,7 @@
 /*   By: juggorr <juggorr@gmail.com>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/30 15:17:40 by juggorr           #+#    #+#             */
-/*   Updated: 2023/12/06 19:23:01 by junghopa         ###   ########.fr       */
+/*   Updated: 2023/12/07 14:04:04 by juggorr          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #ifndef LIBFT_H
@@ -25,7 +25,7 @@ int				ft_isdigit(int c);
 int				ft_isprint(int c);
 char			*ft_itoa(int n);
 char			ft_digits_cnt(int n);
-void			ft_memchr(const void *s, int c, unsigned int n);
+void			*ft_memchr(const void *s, int c, unsigned int n);
 int				ft_memcmp(const void *s1, const void *s2, unsigned int n);
 void			*ft_memcpy(void *dst, void *src, unsigned int n);
 void			*ft_memset(void *b, int c, unsigned int len);
