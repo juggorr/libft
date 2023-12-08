@@ -6,12 +6,12 @@
 /*   By: junghopa <juhnhopa@student.42seoul.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/12 16:18:42 by junghopa          #+#    #+#             */
-/*   Updated: 2023/12/08 13:11:54 by juggorr          ###   ########.fr       */
+/*   Updated: 2023/12/08 21:27:26 by juggorr          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 
-void	*ft_memcpy(void *dst, void *src, size_t n)
+void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
 	size_t			idx;
 	unsigned char	*to;
