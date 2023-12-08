@@ -6,7 +6,7 @@
 /*   By: juggorr <juggorr@gmail.com>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/30 15:17:40 by juggorr           #+#    #+#             */
-/*   Updated: 2023/12/08 13:18:49 by juggorr          ###   ########.fr       */
+/*   Updated: 2023/12/08 15:49:04 by juggorr          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #ifndef LIBFT_H
@@ -37,8 +37,8 @@ char	*ft_strchr(char *s, int c);
 char	*ft_strdup(const char *str);
 void	ft_striteri(char *s, void (*f)(unsigned int, char*));
 char	*ft_strjoin(char const *s1, char const *s2);
-size_t	ft_strlcat(char *dset, char *src, size_t size);
-size_t	ft_strlcpy(char *dst, char *str, size_t size);
+size_t	ft_strlcat(char *dset, const char *src, size_t size);
+size_t	ft_strlcpy(char *dst, const char *str, size_t size);
 size_t	ft_strlen(const char *s);
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 int		ft_strncmp(const char *s1, const char *s2, size_t n);

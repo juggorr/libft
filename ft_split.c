@@ -6,7 +6,7 @@
 /*   By: juggorr <juggorr@gmail.com>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/27 17:19:09 by juggorr           #+#    #+#             */
-/*   Updated: 2023/12/08 09:16:49 by juggorr          ###   ########.fr       */
+/*   Updated: 2023/12/08 20:05:35 by juggorr          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
@@ -46,7 +46,21 @@ static size_t	ft_strlen_split(char const *s, char c)
 	return (idx);
 }
 
-static char	*ft_strdup_split(char const *s, char c)
+static void	free_mems(char **res, size_t arr_idx)
+{
+	long long	idx;
+
+	idx = (long long)arr_idx;
+	idx -= 1;
+	while (idx >= 0)
+	{
+		free(res[idx]);
+		idx--;
+	}
+	free(res);
+}
+
+static char	ft_strdup_split(char const *s, char c, char **res, size_t	arr_idx)
 {
 	size_t	len;
 	char	*str;
@@ -55,7 +69,10 @@ static char	*ft_strdup_split(char const *s, char c)
 	len = ft_strlen_split(s, c);
 	str = (char *)malloc(sizeof(char) * (len + 1));
 	if (!str)
+	{
+		free_mems(res, arr_idx);
 		return (0);
+	}
 	idx = 0;
 	while (idx < len)
 	{
@@ -63,33 +80,33 @@ static char	*ft_strdup_split(char const *s, char c)
 		idx++;
 	}
 	str[idx] = '\0';
-	return (str);
+	res[arr_idx] = str;
+	return (1);
 }
 
 char	**ft_split(char const *s, char c)
 {
 	int		words_cnt;
 	char	**res;
-	size_t	str_idx;
 	size_t	arr_idx;
 
 	words_cnt = ft_count_words(s, c);
 	res = (char **)malloc(sizeof(char *) * (words_cnt + 1));
 	if (!res)
 		return (0);
-	str_idx = 0;
 	arr_idx = 0;
-	while (str_idx < ft_strlen(s))
+	while (*s)
 	{
-		while (s[str_idx] == c && s[str_idx])
-			str_idx++;
-		if (s[str_idx] != c && s[str_idx])
+		while (*s == c && *s)
+			s++;
+		if (*s != c && *s)
 		{
-			res[arr_idx] = ft_strdup_split(&s[str_idx], c);
+			if (!ft_strdup_split(s, c, res, arr_idx))
+				return (0);
 			arr_idx++;
 		}
-		while (s[str_idx] != c && s[str_idx])
-			str_idx++;
+		while (*s != c && *s)
+			s++;
 	}
 	res[arr_idx] = 0;
 	return (res);
