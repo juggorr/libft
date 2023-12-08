@@ -6,14 +6,12 @@
 /*   By: juggorr <juggorr@gmail.com>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/27 17:19:09 by juggorr           #+#    #+#             */
-/*   Updated: 2023/12/06 14:20:37 by juggorr          ###   ########.fr       */
+/*   Updated: 2023/12/08 09:16:49 by juggorr          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 
-extern unsigned int	ft_strlen(char const *s);
-
-int	ft_count_words(char const *s, char c)
+static int	ft_count_words(char const *s, char c)
 {
 	int		words_cnt;
 	int		flag;
@@ -38,7 +36,7 @@ int	ft_count_words(char const *s, char c)
 	return (words_cnt);
 }
 
-size_t	ft_strlen_split(char const *s, char c)
+static size_t	ft_strlen_split(char const *s, char c)
 {
 	size_t	idx;
 
@@ -48,7 +46,7 @@ size_t	ft_strlen_split(char const *s, char c)
 	return (idx);
 }
 
-char	*ft_strdup_split(char const *s, char c)
+static char	*ft_strdup_split(char const *s, char c)
 {
 	size_t	len;
 	char	*str;

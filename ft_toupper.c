@@ -6,9 +6,11 @@
 /*   By: junghopa <juhnhopa@student.42seoul.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/09 16:03:08 by junghopa          #+#    #+#             */
-/*   Updated: 2023/10/09 16:11:42 by junghopa         ###   ########.fr       */
+/*   Updated: 2023/12/08 09:18:21 by juggorr          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+#include "libft.h"
+
 int	ft_toupper(int c)
 {
 	if (c >= 97 && c <= 122)

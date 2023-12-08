@@ -6,12 +6,10 @@
 /*   By: juggorr <juggorr@gmail.com>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/29 15:46:47 by juggorr           #+#    #+#             */
-/*   Updated: 2023/12/07 14:01:38 by juggorr          ###   ########.fr       */
+/*   Updated: 2023/12/08 09:18:21 by juggorr          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
-
-extern unsigned int	ft_strlen(const char *s);
 
 void	ft_putendl_fd(char *s, int fd)
 {

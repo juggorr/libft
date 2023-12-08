@@ -6,12 +6,12 @@
 /*   By: juggorr <juggorr@gmail.com>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/30 16:18:02 by juggorr           #+#    #+#             */
-/*   Updated: 2023/12/07 17:03:21 by juggorr          ###   ########.fr       */
+/*   Updated: 2023/12/08 12:43:18 by juggorr          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-extern void	*ft_memcpy(void *dst, const void *src, unsigned int len);
+#include "libft.h"
 
-void	*ft_memmove(void *dst, void const *src, unsigned int len)
+void	*ft_memmove(void *dst, const void *src, size_t len)
 {
 	unsigned char	*from;
 	unsigned char	*to;

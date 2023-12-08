@@ -6,12 +6,14 @@
 /*   By: juggorr <juggorr@gmail.com>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/22 13:19:55 by juggorr           #+#    #+#             */
-/*   Updated: 2023/12/06 14:50:14 by juggorr          ###   ########.fr       */
+/*   Updated: 2023/12/08 12:18:52 by juggorr          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-int	ft_memcmp(const void *s1, const void *s2, unsigned int n)
+#include "libft.h"
+
+int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	unsigned int	idx;
+	size_t			idx;
 	unsigned char	*tmp1;
 	unsigned char	*tmp2;
 

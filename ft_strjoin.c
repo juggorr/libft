@@ -6,14 +6,12 @@
 /*   By: juggorr <juggorr@gmail.com>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/27 14:23:56 by juggorr           #+#    #+#             */
-/*   Updated: 2023/12/05 19:16:21 by juggorr          ###   ########.fr       */
+/*   Updated: 2023/12/08 09:19:05 by juggorr          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 
-extern unsigned int	ft_strlen(const char *str);
-
-void	ft_fillstr(char *str, size_t str_idx, char const *s1, char const *s2)
+static void	fill(char *str, size_t str_idx, char const *s1, char const *s2)
 {
 	size_t	idx;
 
@@ -46,6 +44,6 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	if (!str)
 		return (0);
 	str_idx = 0;
-	ft_fillstr(str, str_idx, s1, s2);
+	fill(str, str_idx, s1, s2);
 	return (str);
 }

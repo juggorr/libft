@@ -6,12 +6,14 @@
 /*   By: junghopa <juhnhopa@student.42seoul.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/09 15:01:10 by junghopa          #+#    #+#             */
-/*   Updated: 2023/12/05 19:15:46 by juggorr          ###   ########.fr       */
+/*   Updated: 2023/12/08 13:34:59 by juggorr          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-unsigned int	ft_strlen(const char *s)
+#include "libft.h"
+
+size_t	ft_strlen(const char *s)
 {
-	unsigned int	cnt;
+	size_t	cnt;
 
 	cnt = 0;
 	while (*(s + cnt))

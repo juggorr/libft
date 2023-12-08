@@ -6,9 +6,11 @@
 /*   By: junghopa <juhnhopa@student.42seoul.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/09 14:51:22 by junghopa          #+#    #+#             */
-/*   Updated: 2023/10/09 14:53:14 by junghopa         ###   ########.fr       */
+/*   Updated: 2023/12/08 09:18:21 by juggorr          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+#include "libft.h"
+
 int	ft_isprint(int c)
 {
 	if (c >= 32 && c <= 126)

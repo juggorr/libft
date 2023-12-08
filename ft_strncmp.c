@@ -6,12 +6,14 @@
 /*   By: junghopa <juhnhopa@student.42seoul.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/21 14:37:57 by junghopa          #+#    #+#             */
-/*   Updated: 2023/12/06 12:36:32 by juggorr          ###   ########.fr       */
+/*   Updated: 2023/12/08 12:45:38 by juggorr          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-int	ft_strncmp(const char *s1, const char *s2, unsigned int n)
+#include "libft.h"
+
+int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-	unsigned int	idx;
+	size_t	idx;
 
 	idx = 0;
 	if (n == 0)

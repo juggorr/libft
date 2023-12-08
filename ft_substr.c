@@ -6,13 +6,10 @@
 /*   By: juggorr <juggorr@gmail.com>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/24 13:29:49 by juggorr           #+#    #+#             */
-/*   Updated: 2023/12/07 18:00:08 by junghopa         ###   ########.fr       */
+/*   Updated: 2023/12/08 13:42:26 by juggorr          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
-
-extern unsigned int	ft_strlen(const char *s);
-extern char			*ft_strdup(const char *s);
 
 char	*ft_substr(char const *s, size_t start, size_t len)
 {

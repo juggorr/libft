@@ -6,9 +6,11 @@
 /*   By: junghopa <juhnhopa@student.42seoul.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/09 14:46:53 by junghopa          #+#    #+#             */
-/*   Updated: 2023/12/05 19:37:11 by juggorr          ###   ########.fr       */
+/*   Updated: 2023/12/08 09:18:21 by juggorr          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+#include "libft.h"
+
 int	ft_isascii(int c)
 {
 	if (c >= 0 && c < 128)

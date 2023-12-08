@@ -6,12 +6,12 @@
 /*   By: juggorr <juggorr@gmail.com>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/23 16:00:20 by juggorr           #+#    #+#             */
-/*   Updated: 2023/12/07 15:14:37 by juggorr          ###   ########.fr       */
+/*   Updated: 2023/12/08 12:44:36 by juggorr          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-extern unsigned int	ft_strlen(const char *s1);
+#include "libft.h"
 
-char	*ft_strnstr(const char *big, const char *little, unsigned int n)
+char	*ft_strnstr(const char *big, const char *little, size_t n)
 {
 	unsigned int	i;
 	unsigned int	j;

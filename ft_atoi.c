@@ -6,9 +6,11 @@
 /*   By: juggorr <juggorr@gmail.com>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/23 17:12:34 by juggorr           #+#    #+#             */
-/*   Updated: 2023/12/06 00:10:14 by juggorr          ###   ########.fr       */
+/*   Updated: 2023/12/08 09:14:13 by juggorr          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+#include "libft.h"
+
 int	ft_atoi(const char *s1)
 {
 	unsigned int	idx;

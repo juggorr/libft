@@ -6,12 +6,12 @@
 /*   By: junghopa <juhnhopa@student.42seoul.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/28 15:53:19 by junghopa          #+#    #+#             */
-/*   Updated: 2023/12/06 14:10:01 by juggorr          ###   ########.fr       */
+/*   Updated: 2023/12/08 09:18:21 by juggorr          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 
-char	ft_digits_cnt(int n)
+static char	ft_digits_cnt(int n)
 {
 	char	cnt;
 
@@ -33,7 +33,7 @@ char	ft_digits_cnt(int n)
 	return (cnt);
 }
 
-void	ft_neg_itoa(char *res, long long n, unsigned char len)
+static void	ft_neg_itoa(char *res, long long n, unsigned char len)
 {
 	n = -n;
 	res[len] = '\0';
@@ -47,7 +47,7 @@ void	ft_neg_itoa(char *res, long long n, unsigned char len)
 	res[len] = '-';
 }
 
-void	ft_pos_itoa(char *res, long long n, unsigned char len)
+static void	ft_pos_itoa(char *res, long long n, unsigned char len)
 {
 	res[len] = '\0';
 	len--;

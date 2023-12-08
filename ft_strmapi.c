@@ -6,12 +6,10 @@
 /*   By: juggorr <juggorr@gmail.com>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/28 18:34:45 by juggorr           #+#    #+#             */
-/*   Updated: 2023/12/06 13:11:58 by juggorr          ###   ########.fr       */
+/*   Updated: 2023/12/08 09:18:21 by juggorr          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
-
-extern unsigned int	ft_strlen(char const *s);
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {

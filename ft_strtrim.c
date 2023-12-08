@@ -6,14 +6,12 @@
 /*   By: juggorr <juggorr@gmail.com>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/07 08:25:51 by juggorr           #+#    #+#             */
-/*   Updated: 2023/12/07 13:58:00 by juggorr          ###   ########.fr       */
+/*   Updated: 2023/12/08 09:18:21 by juggorr          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 
-extern unsigned int	ft_strlen(const char *s);
-
-char	is_in_set(char const *c, char const *set)
+static char	is_in_set(char const *c, char const *set)
 {
 	while (*set)
 	{
@@ -24,7 +22,7 @@ char	is_in_set(char const *c, char const *set)
 	return (0);
 }
 
-char	*allo_dst(char const *src, long long beg_idx, long long end_idx)
+static char	*allo_dst(char const *src, long long beg_idx, long long end_idx)
 {
 	char		*dst;
 	long long	dst_idx;

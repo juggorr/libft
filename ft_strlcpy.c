@@ -6,15 +6,17 @@
 /*   By: junghopa <juhnhopa@student.42seoul.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/09 16:16:05 by junghopa          #+#    #+#             */
-/*   Updated: 2023/12/06 01:33:54 by juggorr          ###   ########.fr       */
+/*   Updated: 2023/12/08 13:20:45 by juggorr          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-unsigned int	ft_strlcpy(char *dst, char *src, unsigned int dstsize)
+#include "libft.h"
+
+size_t	ft_strlcpy(char *dst, char *src, size_t dstsize)
 {
-	unsigned int	i;
+	size_t	i;
 
 	i = 0;
-	while (i + 1 < dstsize && src[i])
+	while (src[i] && i + 1 < dstsize)
 	{
 		dst[i] = src[i];
 		i++;
