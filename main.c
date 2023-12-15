@@ -1,11 +1,17 @@
-#include <stdio.h>
 #include <string.h>
 #include <stdio.h>
-#include <ctype.h>
-#include "libft.h"
+
+extern size_t	ft_strlcat(char *dst, const char *src, size_t size);
 
 int	main()
 {
-	//printf("%lu\n", ft_strlen(0));
-	printf("%lu\n", strlen(0));
+	char	*d1 = NULL;
+	char	d2[4] = "123";
+	const char	*s1 = NULL;
+	const char	*s2 = "abc";
+	size_t	z1 = 0;
+	size_t	z2 = 4;
+
+	printf("%lu\n", strlcat(d1, s2, 0));
+	printf("%lu\n", ft_strlcat(d1, s2, 0));
 }

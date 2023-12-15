@@ -6,12 +6,12 @@
 /*   By: juggorr <juggorr@gmail.com>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/23 17:12:34 by juggorr           #+#    #+#             */
-/*   Updated: 2023/12/08 09:14:13 by juggorr          ###   ########.fr       */
+/*   Updated: 2023/12/15 13:42:58 by juggorr          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 
-int	ft_atoi(const char *s1)
+int	ft_atoi(const char *s)
 {
 	unsigned int	idx;
 	char			sign;
@@ -20,17 +20,17 @@ int	ft_atoi(const char *s1)
 	idx = 0;
 	sign = 1;
 	val = 0;
-	while (*(s1 + idx) == 32 || (*(s1 + idx) >= 9 && *(s1 + idx) <= 13))
+	while (*(s + idx) == 32 || (*(s + idx) >= 9 && *(s + idx) <= 13))
 		idx++;
-	if (*(s1 + idx) == 43 || *(s1 + idx) == 45)
+	if (*(s + idx) == 43 || *(s + idx) == 45)
 	{
-		if (*(s1 + idx) == 45)
+		if (*(s + idx) == 45)
 			sign *= -1;
 		idx++;
 	}
-	while (*(s1 + idx) >= 48 && *(s1 + idx) <= 57)
+	while (*(s + idx) >= 48 && *(s + idx) <= 57)
 	{
-		val = val * 10 + (*(s1 + idx) - 48);
+		val = val * 10 + (*(s + idx) - 48);
 		idx++;
 	}
 	return ((int)(sign * val));
